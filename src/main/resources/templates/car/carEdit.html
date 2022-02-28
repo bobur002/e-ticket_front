@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	</head>
+	<body>
+		<form method="POST" th:action="@{'http://localhost:2020/admin/car/edit/'+${car.id}}"  enctype="multipart/form-data">
+						<input type="text" name="carType"  placeholder="New Car Type" >
+						<input type="number" name="price"  placeholder="New Price">
+						<input type="number" name="seatCount"  placeholder="New Seat count">
+			<button type="submit">Edit CAr</button>
+		<p><span>Car Type:</span></p><p th:text="${car.carType}"></p>
+		<p><span>Price:</span></p><p th:text="${car.price}"></p>
+		<p><span>Seat Count:</span></p><p th:text="${car.seatCount}"></p>
+		</form>
+	</body>
+</html>
+
